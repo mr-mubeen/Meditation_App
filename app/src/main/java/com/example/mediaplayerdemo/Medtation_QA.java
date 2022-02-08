@@ -16,7 +16,7 @@ public class Medtation_QA extends AppCompatActivity {
     RadioGroup r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
     Button b1;
 
-    RadioButton rb;
+    RadioButton rb1,rb2,rb3,rb4,rb5,rb6,rb7,rb8,rb9,rb10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,6 @@ public class Medtation_QA extends AppCompatActivity {
         r9 = findViewById(R.id.radio9);
         r10 = findViewById(R.id.radio10);
 
-
-
     }
 
     public void go_med(View view)
@@ -43,13 +41,64 @@ public class Medtation_QA extends AppCompatActivity {
 
 
         // get selected radio button from radioGroup
-        int selectedId = r1.getCheckedRadioButtonId();
-
+        int q1 = r1.getCheckedRadioButtonId();
         // find the radiobutton by returned id
-        rb = (RadioButton) findViewById(selectedId);
+        rb1 = (RadioButton) findViewById(q1);
+        String Q1 = rb1.getText().toString();
 
-        Toast.makeText(getApplicationContext(),
-                rb.getText(), Toast.LENGTH_SHORT).show();
+
+        int q2 = r2.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb2 = (RadioButton) findViewById(q2);
+        String Q2 = rb2.getText().toString();
+
+
+        int q3 = r3.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb3 = (RadioButton) findViewById(q3);
+        String Q3 = rb3.getText().toString();
+
+
+        int q4 = r4.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb4 = (RadioButton) findViewById(q1);
+        String Q4 = rb4.getText().toString();
+
+
+        int q5 = r5.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb5 = (RadioButton) findViewById(q1);
+        String Q5 = rb5.getText().toString();
+
+
+        int q6 = r6.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb6 = (RadioButton) findViewById(q1);
+        String Q6 = rb6.getText().toString();
+
+
+        int q7 = r7.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb7 = (RadioButton) findViewById(q1);
+        String Q7 = rb7.getText().toString();
+
+
+        int q8 = r8.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb8 = (RadioButton) findViewById(q1);
+        String Q8 = rb8.getText().toString();
+
+
+        int q9 = r9.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb9 = (RadioButton) findViewById(q1);
+        String Q9 = rb9.getText().toString();
+
+
+        int q10 = r10.getCheckedRadioButtonId();
+        // find the radiobutton by returned id
+        rb10 = (RadioButton) findViewById(q1);
+        String Q10 = rb10.getText().toString();
 
 //        Intent intent = new Intent(getApplicationContext(), SongList.class);
 //        startActivity(intent);
