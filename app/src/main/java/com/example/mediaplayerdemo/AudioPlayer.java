@@ -42,23 +42,30 @@ public class AudioPlayer extends AppCompatActivity {
         {
             case 1:
                 mediaPlayer = MediaPlayer.create(this,R.raw.happy);
-                img.setImageResource(R.drawable.happy);
+                img.setImageResource(R.drawable.m1);
                 break;
             case 2:
                 mediaPlayer = MediaPlayer.create(this,R.raw.twinkle);
-                img.setImageResource(R.drawable.twinkle);
+                img.setImageResource(R.drawable.m2);
                 break;
             case 3:
                 mediaPlayer = MediaPlayer.create(this,R.raw.mary);
-                img.setImageResource(R.drawable.mary);
+                img.setImageResource(R.drawable.m3);
                 break;
             case 4:
                 mediaPlayer = MediaPlayer.create(this,R.raw.london);
-                img.setImageResource(R.drawable.london);
+                img.setImageResource(R.drawable.m4);
                 break;
             case 5:
                 mediaPlayer = MediaPlayer.create(this,R.raw.mcdonald);
-                img.setImageResource(R.drawable.mcdonald);
+                img.setImageResource(R.drawable.m5);
+            case 6:
+                mediaPlayer = MediaPlayer.create(this,R.raw.london);
+                img.setImageResource(R.drawable.m6);
+                break;
+            case 7:
+                mediaPlayer = MediaPlayer.create(this,R.raw.mcdonald);
+                img.setImageResource(R.drawable.m7);
                 break;
 
         }

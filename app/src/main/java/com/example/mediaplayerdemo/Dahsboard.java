@@ -20,7 +20,7 @@ public class Dahsboard extends AppCompatActivity {
         l1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext() , SongList.class);
+                Intent intent = new Intent(getApplicationContext() , Medtation_QA.class);
                 startActivity(intent);
             }
         });
