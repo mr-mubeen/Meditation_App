@@ -9,7 +9,7 @@
         android:id="@+id/coverImg"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:srcCompat="@drawable/happy" />
+        app:srcCompat="@drawable/images" />
 
     <TextView
         android:id="@+id/songName"

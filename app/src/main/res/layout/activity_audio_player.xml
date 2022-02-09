@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-condensed"
         android:gravity="center_horizontal"
         android:padding="20dp"
-        android:text="Meditation"
+        android:text="Playing Medicine"
         android:textColor="#E91E63"
         android:textSize="24sp"
         android:textStyle="bold" />
