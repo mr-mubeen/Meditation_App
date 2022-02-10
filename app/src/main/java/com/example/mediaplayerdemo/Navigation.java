@@ -18,8 +18,8 @@ public class Navigation extends AppCompatActivity {
 
         meowBottomNavigation = findViewById(R.id.meowbottom);
 
-        meowBottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_dashboard_24 ));
-        meowBottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_accessibility_new_24 ));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_accessibility_new_24 ));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_dashboard_24 ));
         meowBottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_person_24 ));
 
 
@@ -32,10 +32,10 @@ public class Navigation extends AppCompatActivity {
 
                 switch (item.getId()){
                     case 1:
-                        fragment = new Dashboard_frag();
+                        fragment = new meditation_frag();
                         break;
                     case 2:
-                        fragment = new meditation_frag();
+                        fragment = new Dashboard_frag();
                         break;
                     case 3:
                         fragment = new Dashboard_frag();
