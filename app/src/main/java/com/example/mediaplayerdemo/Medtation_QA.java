@@ -102,7 +102,7 @@ public class Medtation_QA extends AppCompatActivity {
 
         String ans = Q1 + Q2 + Q3 + Q4 + Q5 + Q6 + Q7+ Q8 + Q9 + Q10;
 
-        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), SongList.class);
         startActivity(intent);
     }
