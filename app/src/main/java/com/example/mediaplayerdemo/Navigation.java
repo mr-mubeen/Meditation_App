@@ -32,20 +32,15 @@ public class Navigation extends AppCompatActivity {
 
                 switch (item.getId()){
                     case 1:
-//                        fragment = new home();
+                        fragment = new Dashboard_frag();
                         break;
-//                    case 2:
-//                        fragment = new donate();
-//                        break;
-//                    case 3:
-//                        fragment = new Dash();
-//                        break;
-//                    case 4:
-//                        fragment = new MyAchievements();
-//                        break;
-//                    case 5:
-//                        fragment = new profile();
-//                        break;
+                    case 2:
+                        fragment = new meditation_frag();
+                        break;
+                    case 3:
+                        fragment = new Dashboard_frag();
+                        break;
+
 
 
 
@@ -56,8 +51,8 @@ public class Navigation extends AppCompatActivity {
             }
         });
 
-        meowBottomNavigation.setCount(1 , "10");
-        meowBottomNavigation.show(3 , true);
+        meowBottomNavigation.setCount(1 , "");
+        meowBottomNavigation.show(2 , true);
         meowBottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {

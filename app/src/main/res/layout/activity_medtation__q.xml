@@ -329,7 +329,10 @@ Or the opposite - being so fidgety or restless that you have been moving around 
                         android:layout_marginTop="20dp"
                         android:onClick="go_med"
                         android:text="Submit"
-                        app:backgroundTint="#3F51B5" />
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#E91E63"
+                        app:cornerRadius="20dp" />
 
                 </LinearLayout>
 

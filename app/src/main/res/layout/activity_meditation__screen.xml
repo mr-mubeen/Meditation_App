@@ -25,7 +25,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Goal"
+                android:text="Cure &amp; Be Happy!"
                 android:textColor="#E91E63"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -36,8 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:text="Select your desired goal to cure and live a happy life"
-                android:textColor="#000000"
+                android:text="Close Your Eyes and Feel Comfort"
+                android:textColor="#9C27B0"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

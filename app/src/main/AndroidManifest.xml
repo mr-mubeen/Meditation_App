@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaPlayerDemo">
-        <activity android:name=".Navigation"></activity>
-        <activity android:name=".Meditation_Screen" />
-        <activity android:name=".Medtation_QA" />
-        <activity android:name=".Dahsboard">
+        <activity android:name=".Navigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Meditation_Screen" />
+        <activity android:name=".Medtation_QA" />
+        <activity android:name=".Dahsboard">
+
         </activity>
         <activity android:name=".SongList" />
         <activity android:name=".VideoPlayer" />

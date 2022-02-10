@@ -19,12 +19,12 @@
         android:id="@+id/meowbottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:mbn_backgroundBottomColor="#32CD32"
+        app:mbn_backgroundBottomColor="#E91E63"
         app:mbn_circleColor="@color/white"
-        app:mbn_countBackgroundColor="#32CD32"
+        app:mbn_countBackgroundColor="#9C27B0"
         app:mbn_countTextColor="@color/white"
         app:mbn_defaultIconColor="@color/white"
-        app:mbn_selectedIconColor="#32CD32" />
+        app:mbn_selectedIconColor="#E91E63" />
 
 
 </LinearLayout>
