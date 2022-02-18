@@ -49,8 +49,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="30dp"
-                    android:src="@drawable/ic_profile"
-                    tools:srcCompat="@drawable/ic_profile" />
+                    android:src="@drawable/ic_baseline_person_24"
+                    tools:srcCompat="@drawable/ic_baseline_person_24" />
 
             </LinearLayout>
 
@@ -64,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
                     android:hint="Username"
+                    android:text="test"
                     android:textColorHint="#E91E63" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,6 +81,7 @@
                     android:background="#FFFFFF"
                     android:hint="Phone"
                     android:inputType="number"
+                    android:text="03152813132"
                     android:textColorHint="#E91E63" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,6 +107,7 @@
 
                     android:background="#FFFFFF"
                     android:hint="Email"
+                    android:text="abc@gmail.com"
                     android:textColorHint="#E91E63" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,6 +126,7 @@
                     android:background="#FFFFFF"
                     android:hint="Password"
                     android:inputType="textPassword"
+                    android:text="03152basda@"
                     android:textColorHint="#E91E63" />
             </com.google.android.material.textfield.TextInputLayout>
 

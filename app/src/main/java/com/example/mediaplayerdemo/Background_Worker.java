@@ -44,7 +44,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         if (type.equals("login")) {
             try {
-                String login_url = "http://lms-php.000webhostapp.com/naiki/login.php";
+                String login_url = "http://192.168.2.107/meditation_app/login.php";
                 String un = params[1];
                 String ps = params[2];
 
@@ -79,210 +79,6 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
             }
         }
 
-
-
-
-
-
-        if (type.equals("story")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/story.php";
-            String rid = params[1];
-            String un = params[2];
-            String st = params[3];
-
-
-
-            try {
-                URL url = new URL(reg_url);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
-                OutputStream outputStream = httpURLConnection.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-                String post_data =
-                        URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8") +
-                                "&" + URLEncoder.encode("un", "UTF-8") + "=" + URLEncoder.encode(un, "UTF-8") +
-                                "&" + URLEncoder.encode("st", "UTF-8") + "=" + URLEncoder.encode(st, "UTF-8") ;
-
-
-
-                bufferedWriter.write(post_data);
-                bufferedWriter.flush();
-                bufferedWriter.close();
-                outputStreamWriter.close();
-                outputStream.close();
-
-
-                InputStream inputStream = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                String line = "";
-                String result = "";
-
-                while ((line = bufferedReader.readLine()) != null) {
-                    result += line;
-                }
-
-                bufferedReader.close();
-                inputStreamReader.close();
-                inputStream.close();
-
-                httpURLConnection.disconnect();
-
-
-                return result;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        if (type.equals("donate")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/donate.php";
-            String rid = params[1];
-            String it = params[2];
-            String qt = params[3];
-            String ds = params[4];
-            String ct = params[5];
-            String im = params[6];
-            String type = "Donate";
-
-
-
-            try {
-                URL url = new URL(reg_url);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
-                OutputStream outputStream = httpURLConnection.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-                String post_data =
-                        URLEncoder.encode("it", "UTF-8") + "=" + URLEncoder.encode(it, "UTF-8") +
-                                "&" + URLEncoder.encode("qt", "UTF-8") + "=" + URLEncoder.encode(qt, "UTF-8") +
-                                "&" + URLEncoder.encode("ds", "UTF-8") + "=" + URLEncoder.encode(ds, "UTF-8") +
-                                "&" + URLEncoder.encode("im", "UTF-8") + "=" + URLEncoder.encode(im, "UTF-8") +
-                                "&" + URLEncoder.encode("type", "UTF-8") + "=" + URLEncoder.encode(type, "UTF-8") +
-                                "&" + URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8") +
-
-                                "&" + URLEncoder.encode("ct", "UTF-8") + "=" + URLEncoder.encode(ct, "UTF-8") ;
-
-
-                bufferedWriter.write(post_data);
-                bufferedWriter.flush();
-                bufferedWriter.close();
-                outputStreamWriter.close();
-                outputStream.close();
-
-
-                InputStream inputStream = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                String line = "";
-                String result = "";
-
-                while ((line = bufferedReader.readLine()) != null) {
-                    result += line;
-                }
-
-                bufferedReader.close();
-                inputStreamReader.close();
-                inputStream.close();
-
-                httpURLConnection.disconnect();
-
-
-                return result;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-
-        if (type.equals("request")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/donate.php";
-            String rid = params[1];
-            String it = params[2];
-            String qt = params[3];
-            String ds = params[4];
-            String ct = params[5];
-            String im = params[6];
-            String type = "Request";
-
-
-
-            try {
-                URL url = new URL(reg_url);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
-                OutputStream outputStream = httpURLConnection.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-                String post_data =
-                        URLEncoder.encode("it", "UTF-8") + "=" + URLEncoder.encode(it, "UTF-8") +
-                                "&" + URLEncoder.encode("qt", "UTF-8") + "=" + URLEncoder.encode(qt, "UTF-8") +
-                                "&" + URLEncoder.encode("ds", "UTF-8") + "=" + URLEncoder.encode(ds, "UTF-8") +
-                                "&" + URLEncoder.encode("im", "UTF-8") + "=" + URLEncoder.encode(im, "UTF-8") +
-                                "&" + URLEncoder.encode("type", "UTF-8") + "=" + URLEncoder.encode(type, "UTF-8") +
-                                "&" + URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8") +
-
-                                "&" + URLEncoder.encode("ct", "UTF-8") + "=" + URLEncoder.encode(ct, "UTF-8") ;
-
-
-                bufferedWriter.write(post_data);
-                bufferedWriter.flush();
-                bufferedWriter.close();
-                outputStreamWriter.close();
-                outputStream.close();
-
-
-                InputStream inputStream = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                String line = "";
-                String result = "";
-
-                while ((line = bufferedReader.readLine()) != null) {
-                    result += line;
-                }
-
-                bufferedReader.close();
-                inputStreamReader.close();
-                inputStream.close();
-
-                httpURLConnection.disconnect();
-
-
-                return result;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
 
 
         if (type.equals("update")) {
@@ -351,19 +147,16 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         }
 
 
-        //REGISTER CODE
+
 //        REGISTER CODE
         if (type.equals("register")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/register.php";
+            String reg_url = "http://192.168.2.107/meditation_app/register.php";
             String un = params[1];
             String ph = params[2];
             String em = params[3];
             String ps = params[4];
-            String ad = params[5];
-            String tp = params[6];
-            String im = params[7];
-            String a = params[8];
-            String b = params[9];
+//            String im = params[5];
+
 
 
 
@@ -383,12 +176,8 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                         URLEncoder.encode("un", "UTF-8") + "=" + URLEncoder.encode(un, "UTF-8") +
                                 "&" + URLEncoder.encode("ph", "UTF-8") + "=" + URLEncoder.encode(ph, "UTF-8") +
                                 "&" + URLEncoder.encode("em", "UTF-8") + "=" + URLEncoder.encode(em, "UTF-8") +
-                                "&" + URLEncoder.encode("ps", "UTF-8") + "=" + URLEncoder.encode(ps, "UTF-8")+
-                                "&" + URLEncoder.encode("ad", "UTF-8") + "=" + URLEncoder.encode(ad, "UTF-8")+
-                                "&" + URLEncoder.encode("tp", "UTF-8") + "=" + URLEncoder.encode(tp, "UTF-8")+
-                                "&" + URLEncoder.encode("a", "UTF-8") + "=" + URLEncoder.encode(a, "UTF-8")+
-                                "&" + URLEncoder.encode("b", "UTF-8") + "=" + URLEncoder.encode(b, "UTF-8")+
-                                "&" + URLEncoder.encode("im", "UTF-8") + "=" + URLEncoder.encode(im, "UTF-8");
+                                "&" + URLEncoder.encode("ps", "UTF-8") + "=" + URLEncoder.encode(ps, "UTF-8");
+
 
 
 
@@ -479,117 +268,6 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         }
 
-        if (type.equals("donated")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/donated.php";
-            String did = params[1];
-
-
-            try {
-                URL url = new URL(reg_url);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
-                OutputStream outputStream = httpURLConnection.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-                String post_data = URLEncoder.encode("did", "UTF-8") + "=" + URLEncoder.encode(did, "UTF-8");
-
-
-
-
-                bufferedWriter.write(post_data);
-                bufferedWriter.flush();
-                bufferedWriter.close();
-                outputStreamWriter.close();
-                outputStream.close();
-
-
-                InputStream inputStream = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                String line = "";
-                String result = "";
-
-                while ((line = bufferedReader.readLine()) != null) {
-                    result += line;
-                }
-
-                bufferedReader.close();
-                inputStreamReader.close();
-                inputStream.close();
-
-                httpURLConnection.disconnect();
-
-                alertDialog.setTitle("Registration Status");
-                return result;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        if (type.equals("recieved")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/recieved.php";
-            String did = params[1];
-
-
-            try {
-                URL url = new URL(reg_url);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
-                OutputStream outputStream = httpURLConnection.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-                String post_data = URLEncoder.encode("did", "UTF-8") + "=" + URLEncoder.encode(did, "UTF-8");
-
-
-
-
-                bufferedWriter.write(post_data);
-                bufferedWriter.flush();
-                bufferedWriter.close();
-                outputStreamWriter.close();
-                outputStream.close();
-
-
-                InputStream inputStream = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                String line = "";
-                String result = "";
-
-                while ((line = bufferedReader.readLine()) != null) {
-                    result += line;
-                }
-
-                bufferedReader.close();
-                inputStreamReader.close();
-                inputStream.close();
-
-                httpURLConnection.disconnect();
-
-                alertDialog.setTitle("Registration Status");
-                return result;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
 
         return null;
 
@@ -623,20 +301,18 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
                         JSONObject jobj = new JSONObject(s);
                         String r_id = jobj.getString("r_id");
-                        int uphon = jobj.getInt("uphone");
+                        int uphon = jobj.getInt("phone");
                         String nam = jobj.getString("uname");
-                        String type = jobj.getString("utype");
-                        String pas = jobj.getString("upass");
+                        String pas = jobj.getString("password");
 
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putInt("uphone", uphon);
                         editor.putString("rid", r_id);
                         editor.putString("uname", nam);
                         editor.putString("upass", pas);
-                        editor.putString("utype", type);
                         editor.commit();
 
-                        Intent intent = new Intent(context, Naviagtion.class);
+                        Intent intent = new Intent(context, Navigation.class);
                         context.startActivity(intent);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -651,6 +327,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 //                    alertDialog.setMessage("Regsiteration Failed Phone Number already Exists '\n' Please Login");
 //                    alertDialog.show();
                     Toast.makeText(context, "Registered", Toast.LENGTH_SHORT).show();
+
 
 
                 } else {

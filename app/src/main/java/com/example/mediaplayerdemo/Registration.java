@@ -1,38 +1,30 @@
 package com.example.mediaplayerdemo;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.dhaval2404.imagepicker.ImagePicker;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Registartion extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
 
 
 
@@ -55,7 +47,7 @@ public class Registartion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registartion);
+        setContentView(R.layout.activity_registration);
 
 
         button = findViewById(R.id.register);
@@ -84,14 +76,6 @@ public class Registartion extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,48 +99,35 @@ public class Registartion extends AppCompatActivity {
                 } else if (ed2.length() != 11) {
                     ed2.requestFocus();
                     ed2.setError("Enter correct mobile number");
-                } else if (ed2.length() == 11 && ed4.length() != 0 && ed3.length() != 0 && ed1.length() != 0 && t1.length() != 0 && ed3.getText().toString().trim().matches(emailPattern)) {
+                } else if (ed2.length() == 11 && ed4.length() != 0 && ed3.length() != 0 && ed1.length() != 0  && ed3.getText().toString().trim().matches(emailPattern)) {
 
                     String username = ed1.getText().toString();
                     String phone = ed2.getText().toString();
                     String email = ed3.getText().toString();
                     String password = ed4.getText().toString();
-                    String address_text = t1.getText().toString();
-
-
-                    Background_Worker background_worker = new Background_Worker(getApplication());
-                    background_worker.execute("register", username, phone, email, password, address_text, tp, image_path, a, b);
 
 
                     if (isValidPassword(password))
                     {
-
-//                        Intent intent = new Intent(registration.this , OTP.class);
-//                        intent.putExtra("mobile" , phone);
-//
-//                        intent.putExtra("verificationId" , verificationId);
-
-
-                        if (uri1 == null)
-                        {
-                            Toast.makeText(getApplicationContext(), "Please upoad Image", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            image_path = encodedbitmap(bitmap);
-
-
-
-                        }
-
-
+//                        if (uri1 == null)
+//                        {
+//                            Toast.makeText(getApplicationContext(), "Please upload Image", Toast.LENGTH_SHORT).show();
+//                        }
+//                        else {
+//                            image_path = encodedbitmap(bitmap);
+//                        }
 
                     }
-                    else{
+
+                    else {
                         Toast.makeText(Registration.this, " Password must has atleast 8 characters that include at least 1 lowercase character, 1 uppercase, 1 number, and 1 special character", Toast.LENGTH_SHORT).show();
                     }
 
 
-//
+
+                    Background_Worker background_worker = new Background_Worker(getApplication());
+                    background_worker.execute("register", username, phone, email, password);
+
 
                 }
 
@@ -228,13 +199,5 @@ public class Registartion extends AppCompatActivity {
         return image_path;
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }

@@ -15,6 +15,7 @@ public class Medtation_QA extends AppCompatActivity {
 
     RadioGroup r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
     Button b1;
+    int points;
 
     RadioButton rb1,rb2,rb3,rb4,rb5,rb6,rb7,rb8,rb9,rb10;
 
@@ -101,6 +102,54 @@ public class Medtation_QA extends AppCompatActivity {
         String Q10 = rb10.getText().toString();
 
         String ans = Q1 + Q2 + Q3 + Q4 + Q5 + Q6 + Q7+ Q8 + Q9 + Q10;
+
+        if (Q1.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q2.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q3.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q4.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q5.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q6.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q7.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q8.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q9.equals("Yes"))
+        {
+            points += 1;
+        }
+        if(Q10.equals("Yes"))
+        {
+            points += 1;
+        }
+//        else{
+//            points += 0;
+//            Toast.makeText(this, "You are mentally healthy", Toast.LENGTH_SHORT).show();
+//        }
+
+//        Toast.makeText(this, "Your Points are", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, points, Toast.LENGTH_SHORT).show();
 
 //        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), SongList.class);
