@@ -39,15 +39,10 @@ public class SongList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                int a = getIntent().getIntExtra("points" , 1);
-                int b = 1;
-                if (a == 5)
-                {
-                    b = 2;
-                }
 
 
-                Song clickedSong = (Song) list.getItemAtPosition(b);
+
+                Song clickedSong = (Song) list.getItemAtPosition(i);
 
                 Intent intent = new Intent(SongList.this,AudioPlayer.class);
                 Bundle bd = new Bundle();

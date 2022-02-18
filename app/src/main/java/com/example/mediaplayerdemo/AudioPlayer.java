@@ -33,10 +33,19 @@ public class AudioPlayer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_player);
 
+        int getID = getIntent().getIntExtra("points" , 1);
+        int id = 1;
+        if (getID >= 5)
+        {
+            id = 2;
+        }
+
         img= findViewById(R.id.imageView3);
 
         Bundle bd = getIntent().getExtras();
-        int songId = bd.getInt("songId");
+//        int songId = bd.getInt("songId");
+        int songId = id;
+
 
         switch (songId)
         {
