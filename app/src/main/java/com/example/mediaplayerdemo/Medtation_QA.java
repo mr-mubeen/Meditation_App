@@ -143,13 +143,12 @@ public class Medtation_QA extends AppCompatActivity {
         {
             points += 1;
         }
-//        else{
-//            points += 0;
-//            Toast.makeText(this, "You are mentally healthy", Toast.LENGTH_SHORT).show();
-//        }
+
 
 //        Toast.makeText(this, "Your Points are", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, points, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, points, Toast.LENGTH_SHORT).show();
+
+        System.out.println(points);
 
 //        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), SongList.class);

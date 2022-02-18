@@ -27,8 +27,8 @@ public class SongList extends AppCompatActivity {
         songs.add(new Song(3,R.drawable.m3,"Mary Had A Little Lamb","abc"));
         songs.add(new Song(4,R.drawable.m4,"London Bridge is Falling Down","abc"));
         songs.add(new Song(5,R.drawable.m5,"Old McDonald Had a Farm","abc"));
-        songs.add(new Song(4,R.drawable.m6,"London Bridge is Falling Down","abc"));
-        songs.add(new Song(5,R.drawable.m7,"Old McDonald Had a Farm","abc"));
+        songs.add(new Song(6,R.drawable.m6,"London Bridge is Falling Down","abc"));
+        songs.add(new Song(7,R.drawable.m7,"Old McDonald Had a Farm","abc"));
 
 
         SongAdapter adp = new SongAdapter(this,R.layout.item_layout,songs);
