@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaPlayerDemo">
+        <activity android:name=".Registartion"></activity>
         <activity android:name=".Navigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +19,11 @@
         </activity>
         <activity android:name=".Meditation_Screen" />
         <activity android:name=".Medtation_QA" />
-        <activity android:name=".Dahsboard">
-
-        </activity>
+        <activity android:name=".Dahsboard"></activity>
         <activity android:name=".SongList" />
         <activity android:name=".VideoPlayer" />
         <activity android:name=".AudioPlayer" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
