@@ -152,6 +152,7 @@ public class Medtation_QA extends AppCompatActivity {
 
 //        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), SongList.class);
+        intent.putExtra("points", points);
         startActivity(intent);
     }
 }
