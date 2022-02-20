@@ -13,6 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaPlayerDemo">
+        <activity android:name=".Psychosis"></activity>
+        <activity android:name=".Despression" />
+        <activity android:name=".Bipolar" />
+        <activity android:name=".Anxiety" />
         <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registration">
-
-        </activity>
-        <activity android:name=".Navigation"></activity>
+        <activity android:name=".Registration" />
+        <activity android:name=".Navigation" />
         <activity android:name=".Meditation_Screen" />
         <activity android:name=".Medtation_QA" />
         <activity android:name=".Dahsboard" />
