@@ -26,14 +26,14 @@ public class Meditation_Screen extends AppCompatActivity {
         l1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext() , Medtation_QA.class);
+                Intent intent = new Intent(getApplicationContext() , Anxiety.class);
                 startActivity(intent);
             }
         });
         l2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext() , Medtation_QA.class);
+                Intent intent = new Intent(getApplicationContext() , Despression.class);
                 startActivity(intent);
             }
         });
@@ -55,14 +55,14 @@ public class Meditation_Screen extends AppCompatActivity {
         l5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext() ,);
+                Intent intent = new Intent(getApplicationContext() , Bipolar.class);
                 startActivity(intent);
             }
         });
         l6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext() , Medtation_QA.class);
+                Intent intent = new Intent(getApplicationContext() , Psychosis.class);
                 startActivity(intent);
             }
         });
