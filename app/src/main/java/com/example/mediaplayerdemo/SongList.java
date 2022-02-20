@@ -22,13 +22,13 @@ public class SongList extends AppCompatActivity {
         list = findViewById(R.id.songlist);
 
         ArrayList<Song> songs =  new ArrayList<>();
-        songs.add(new Song(1,R.drawable.m1,"If You're Happy and You Know It","abc"));
-        songs.add(new Song(2,R.drawable.m2,"Twinkle Twinkle Little Star","abc"));
-        songs.add(new Song(3,R.drawable.m3,"Mary Had A Little Lamb","abc"));
-        songs.add(new Song(4,R.drawable.m4,"London Bridge is Falling Down","abc"));
-        songs.add(new Song(5,R.drawable.m5,"Old McDonald Had a Farm","abc"));
-        songs.add(new Song(6,R.drawable.m6,"London Bridge is Falling Down","abc"));
-        songs.add(new Song(7,R.drawable.m7,"Old McDonald Had a Farm","abc"));
+        songs.add(new Song(1,R.drawable.m1,"Anxiety","abc"));
+        songs.add(new Song(2,R.drawable.m2,"Bipolar","abc"));
+        songs.add(new Song(3,R.drawable.m3,"Depression","abc"));
+        songs.add(new Song(4,R.drawable.m4,"Addiction","abc"));
+        songs.add(new Song(5,R.drawable.m5,"Energy","abc"));
+        songs.add(new Song(6,R.drawable.m6,"Sleep","abc"));
+        songs.add(new Song(7,R.drawable.m7,"Anxiety","abc"));
 
 
         SongAdapter adp = new SongAdapter(this,R.layout.item_layout,songs);

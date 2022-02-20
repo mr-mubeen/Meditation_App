@@ -35,9 +35,21 @@ public class AudioPlayer extends AppCompatActivity {
 
         int getID = getIntent().getIntExtra("points" , 1);
         int id = 1;
-        if (getID >= 5)
+        if (getID <= 3)
+        {
+            id = 1;
+        }
+        else if (getID <= 6 && getID >= 4)
         {
             id = 2;
+        }
+        else if (getID <= 10 && getID >= 7)
+        {
+            id = 4;
+        }
+        else
+        {
+            id = 5;
         }
 
         img= findViewById(R.id.imageView3);
@@ -50,30 +62,30 @@ public class AudioPlayer extends AppCompatActivity {
         switch (songId)
         {
             case 1:
-                mediaPlayer = MediaPlayer.create(this,R.raw.happy);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Anxiety);
                 img.setImageResource(R.drawable.m1);
                 break;
             case 2:
-                mediaPlayer = MediaPlayer.create(this,R.raw.twinkle);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Bipolar);
                 img.setImageResource(R.drawable.m2);
                 break;
             case 3:
-                mediaPlayer = MediaPlayer.create(this,R.raw.mary);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Depression);
                 img.setImageResource(R.drawable.m3);
                 break;
             case 4:
-                mediaPlayer = MediaPlayer.create(this,R.raw.london);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Energy);
                 img.setImageResource(R.drawable.m4);
                 break;
             case 5:
-                mediaPlayer = MediaPlayer.create(this,R.raw.mcdonald);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Sleep);
                 img.setImageResource(R.drawable.m5);
             case 6:
-                mediaPlayer = MediaPlayer.create(this,R.raw.london);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Sleep);
                 img.setImageResource(R.drawable.m6);
                 break;
             case 7:
-                mediaPlayer = MediaPlayer.create(this,R.raw.mcdonald);
+                mediaPlayer = MediaPlayer.create(this,R.raw.Anxiety);
                 img.setImageResource(R.drawable.m7);
                 break;
 
