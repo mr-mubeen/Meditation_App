@@ -62,30 +62,30 @@ public class AudioPlayer extends AppCompatActivity {
         switch (songId)
         {
             case 1:
-                mediaPlayer = MediaPlayer.create(this,R.raw.happy);
+                mediaPlayer = MediaPlayer.create(this,R.raw.addiction);
                 img.setImageResource(R.drawable.m1);
                 break;
             case 2:
-                mediaPlayer = MediaPlayer.create(this,R.raw.twinkle);
+                mediaPlayer = MediaPlayer.create(this,R.raw.energy);
                 img.setImageResource(R.drawable.m2);
                 break;
             case 3:
-                mediaPlayer = MediaPlayer.create(this,R.raw.mary);
+                mediaPlayer = MediaPlayer.create(this,R.raw.depression);
                 img.setImageResource(R.drawable.m3);
                 break;
             case 4:
-                mediaPlayer = MediaPlayer.create(this,R.raw.london);
+                mediaPlayer = MediaPlayer.create(this,R.raw.sleep);
                 img.setImageResource(R.drawable.m4);
                 break;
             case 5:
-                mediaPlayer = MediaPlayer.create(this,R.raw.mcdonald);
+                mediaPlayer = MediaPlayer.create(this,R.raw.addiction);
                 img.setImageResource(R.drawable.m5);
             case 6:
-                mediaPlayer = MediaPlayer.create(this,R.raw.london);
+                mediaPlayer = MediaPlayer.create(this,R.raw.energy);
                 img.setImageResource(R.drawable.m6);
                 break;
             case 7:
-                mediaPlayer = MediaPlayer.create(this,R.raw.mcdonald);
+                mediaPlayer = MediaPlayer.create(this,R.raw.sleep);
                 img.setImageResource(R.drawable.m7);
                 break;
 

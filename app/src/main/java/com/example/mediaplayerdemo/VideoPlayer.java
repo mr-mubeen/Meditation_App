@@ -15,13 +15,13 @@ public class VideoPlayer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_player);
 
-        videoView = findViewById(R.id.videoView);
-        MediaController mediaController = new MediaController(this);
-
-        videoView.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.big_buck_bunny);
-        mediaController.setAnchorView(videoView);
-        videoView.setMediaController(mediaController);
-        videoView.start();
+//        videoView = findViewById(R.id.videoView);
+//        MediaController mediaController = new MediaController(this);
+//
+//        videoView.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.big_buck_bunny);
+//        mediaController.setAnchorView(videoView);
+//        videoView.setMediaController(mediaController);
+//        videoView.start();
 
 
     }

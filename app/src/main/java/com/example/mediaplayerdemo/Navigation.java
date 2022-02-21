@@ -3,6 +3,7 @@ package com.example.mediaplayerdemo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -40,12 +41,6 @@ public class Navigation extends AppCompatActivity {
                     case 3:
                         fragment = new Dashboard_frag();
                         break;
-
-
-
-
-
-
                 }
                 loadFragment(fragment);
             }
@@ -70,5 +65,11 @@ public class Navigation extends AppCompatActivity {
 
     private void loadFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout , fragment).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Navigation.class);
+        startActivity(intent);
     }
 }

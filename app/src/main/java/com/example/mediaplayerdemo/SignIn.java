@@ -70,9 +70,6 @@ public class SignIn extends AppCompatActivity {
                 Background_Worker background_worker = new Background_Worker(this);
                 background_worker.execute("login", user_text, pass_text);
             }
-
-
-
         }
 
 
