@@ -438,9 +438,8 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
                 String post_data =
-                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") +
-                                "&" + URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
-
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
+                                URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
                 bufferedWriter.write(post_data);
@@ -467,7 +466,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
                 httpURLConnection.disconnect();
 
-
+                alertDialog.setTitle("Registration Status");
                 return result;
 
             } catch (MalformedURLException e) {
