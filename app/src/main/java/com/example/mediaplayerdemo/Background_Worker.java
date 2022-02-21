@@ -163,7 +163,8 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8")+
+                String post_data =
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
                         URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
@@ -204,6 +205,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         if (type.equals("bipolar_points")) {
             String reg_url = "http://192.168.2.107/meditation_app/bipolar_points.php";
             String p = params[1];
+            String rid = params[2];
 
             try {
                 URL url = new URL(reg_url);
@@ -216,7 +218,9 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+                String post_data =
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
+                                URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
                 bufferedWriter.write(post_data);
@@ -256,6 +260,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         if (type.equals("depression_points")) {
             String reg_url = "http://192.168.2.107/meditation_app/depression_points.php";
             String p = params[1];
+            String rid = params[2];
 
             try {
                 URL url = new URL(reg_url);
@@ -268,8 +273,9 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
-
+                String post_data =
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
+                                URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
@@ -308,6 +314,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         if (type.equals("psychosis_points")) {
             String reg_url = "http://192.168.2.107/meditation_app/psychosis_points.php";
             String p = params[1];
+            String rid = params[2];
 
             try {
                 URL url = new URL(reg_url);
@@ -320,7 +327,9 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+                String post_data =
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
+                                URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
                 bufferedWriter.write(post_data);
@@ -360,6 +369,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         if (type.equals("pstd_points")) {
             String reg_url = "http://192.168.2.107/meditation_app/pstd_points.php";
             String p = params[1];
+            String rid = params[2];
 
             try {
                 URL url = new URL(reg_url);
@@ -372,7 +382,9 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+                String post_data =
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
+                                URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
                 bufferedWriter.write(post_data);
@@ -424,7 +436,9 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+                String post_data =
+                        URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") + "&" +
+                                URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
                 bufferedWriter.write(post_data);
