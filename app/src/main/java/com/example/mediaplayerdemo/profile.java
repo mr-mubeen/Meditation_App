@@ -173,7 +173,7 @@ public class profile extends Fragment {
                                 String bipolar_points = jsonObject.getString("bipolar_points");
                                 String psychosis_points = jsonObject.getString("psychosis_points");
                                 String url = "http:///profiles/";
-                                image = url + jsonObject.getString("profile_image");
+//                                image = url + jsonObject.getString("profile_image");
 
 
 //  Setting values again to textboxes
