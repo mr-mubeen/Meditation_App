@@ -28,8 +28,9 @@ public class SignIn extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("userr" , Context.MODE_PRIVATE);
 
-        if(sharedPreferences.contains("uname") && sharedPreferences.contains("password"))
+        if(sharedPreferences.contains("r_id") && sharedPreferences.contains("password"))
         {
+            String id = sharedPreferences.getString("r_id", "2");
             Intent intent = new Intent(this , Navigation.class);
             startActivity(intent);
         }
@@ -53,23 +54,14 @@ public class SignIn extends AppCompatActivity {
 
         else{
 
-            if (phone.length() != 11)
-            {
-                Toast.makeText(this, "Enter correct mobile number", Toast.LENGTH_SHORT).show();
-            }
-            else if(pass.length() < 8)
-            {
-                Toast.makeText(this, "Please enter complete password", Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
+
                 String user_text = phone.getText().toString();
                 String pass_text = pass.getText().toString();
 //            String type = "login";
 
                 Background_Worker background_worker = new Background_Worker(this);
                 background_worker.execute("login", user_text, pass_text);
-            }
+
         }
 
 
