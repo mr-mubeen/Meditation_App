@@ -109,17 +109,17 @@ public class Registration extends AppCompatActivity {
 
                     if (isValidPassword(password))
                     {
-//                        if (uri1 == null)
-//                        {
-//                            Toast.makeText(getApplicationContext(), "Please upload Image", Toast.LENGTH_SHORT).show();
-//                        }
-//                        else {
-//                            image_path = encodedbitmap(bitmap);
-//                        }
+                        if (uri1 == null)
+                        {
+                            Toast.makeText(getApplicationContext(), "Please upload Image", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            image_path = encodedbitmap(bitmap);
+                        }
 
 
                         Background_Worker background_worker = new Background_Worker(getApplication());
-                        background_worker.execute("register", username, phone, email, password);
+                        background_worker.execute("register", username, phone, email, password,image_path);
 
                     }
 
