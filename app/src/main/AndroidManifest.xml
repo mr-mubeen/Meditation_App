@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaPlayerDemo">
-        <activity android:name=".Psychosis"></activity>
+        <activity android:name=".pstd"></activity>
+        <activity android:name=".addiction" />
+        <activity android:name=".Psychosis" />
         <activity android:name=".Despression" />
         <activity android:name=".Bipolar" />
         <activity android:name=".Anxiety" />

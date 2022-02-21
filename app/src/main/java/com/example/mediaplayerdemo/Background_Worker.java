@@ -148,7 +148,267 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
 
         if (type.equals("anxiety_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/points.php";
+            String reg_url = "http://192.168.2.107/meditation_app/anxiety_points.php";
+            String p = params[1];
+
+            try {
+                URL url = new URL(reg_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoInput(true);
+                httpURLConnection.setDoOutput(true);
+
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+
+
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStreamWriter.close();
+                outputStream.close();
+
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                String line = "";
+                String result = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+
+                bufferedReader.close();
+                inputStreamReader.close();
+                inputStream.close();
+
+                httpURLConnection.disconnect();
+
+                alertDialog.setTitle("Registration Status");
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        if (type.equals("bipolar_points")) {
+            String reg_url = "http://192.168.2.107/meditation_app/bipolar_points.php";
+            String p = params[1];
+
+            try {
+                URL url = new URL(reg_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoInput(true);
+                httpURLConnection.setDoOutput(true);
+
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+
+
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStreamWriter.close();
+                outputStream.close();
+
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                String line = "";
+                String result = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+
+                bufferedReader.close();
+                inputStreamReader.close();
+                inputStream.close();
+
+                httpURLConnection.disconnect();
+
+                alertDialog.setTitle("Registration Status");
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        if (type.equals("depression_points")) {
+            String reg_url = "http://192.168.2.107/meditation_app/depression_points.php";
+            String p = params[1];
+
+            try {
+                URL url = new URL(reg_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoInput(true);
+                httpURLConnection.setDoOutput(true);
+
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+
+
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStreamWriter.close();
+                outputStream.close();
+
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                String line = "";
+                String result = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+
+                bufferedReader.close();
+                inputStreamReader.close();
+                inputStream.close();
+
+                httpURLConnection.disconnect();
+
+                alertDialog.setTitle("Registration Status");
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        if (type.equals("psychosis_points")) {
+            String reg_url = "http://192.168.2.107/meditation_app/psychosis_points.php";
+            String p = params[1];
+
+            try {
+                URL url = new URL(reg_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoInput(true);
+                httpURLConnection.setDoOutput(true);
+
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+
+
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStreamWriter.close();
+                outputStream.close();
+
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                String line = "";
+                String result = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+
+                bufferedReader.close();
+                inputStreamReader.close();
+                inputStream.close();
+
+                httpURLConnection.disconnect();
+
+                alertDialog.setTitle("Registration Status");
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        if (type.equals("pstd_points")) {
+            String reg_url = "http://192.168.2.107/meditation_app/pstd_points.php";
+            String p = params[1];
+
+            try {
+                URL url = new URL(reg_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoInput(true);
+                httpURLConnection.setDoOutput(true);
+
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8") ;
+
+
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStreamWriter.close();
+                outputStream.close();
+
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                String line = "";
+                String result = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+
+                bufferedReader.close();
+                inputStreamReader.close();
+                inputStream.close();
+
+                httpURLConnection.disconnect();
+
+                alertDialog.setTitle("Registration Status");
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        if (type.equals("addiction_points")) {
+            String reg_url = "http://192.168.2.107/meditation_app/addiction_points.php";
             String p = params[1];
 
             try {

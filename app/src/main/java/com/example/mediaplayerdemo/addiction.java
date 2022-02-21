@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-public class Bipolar extends AppCompatActivity {
+public class addiction extends AppCompatActivity {
 
     RadioGroup r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
     Button b1;
@@ -20,7 +20,7 @@ public class Bipolar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bipolar);
+        setContentView(R.layout.activity_addiction);
 
         r1 = (RadioGroup) findViewById(R.id.radio1);
         r2 = (RadioGroup) findViewById(R.id.radio2);
@@ -151,12 +151,12 @@ public class Bipolar extends AppCompatActivity {
         String point = String.valueOf(points);
 
         Background_Worker background_worker = new Background_Worker(this);
-        background_worker.execute("bipolar_points", point);
+        background_worker.execute("addiction_points", point);
+
 
 //        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), AudioPlayer.class);
         intent.putExtra("points", points);
         startActivity(intent);
     }
-
 }

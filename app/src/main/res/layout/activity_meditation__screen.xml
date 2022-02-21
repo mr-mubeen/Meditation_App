@@ -6,265 +6,276 @@
     android:layout_height="match_parent"
     tools:context=".Meditation_Screen">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Cure &amp; Be Happy!"
-                android:textColor="#E91E63"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="10dp"
-                android:text="Close Your Eyes and Feel Comfort"
-                android:textColor="#9C27B0"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+            android:orientation="vertical" >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/anxiety_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:orientation="vertical">
 
-                    <androidx.cardview.widget.CardView
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Cure &amp; Be Happy!"
+                        android:textColor="#E91E63"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Close Your Eyes and Feel Comfort"
+                        android:textColor="#9C27B0"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:id="@+id/imageView4"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/anxiety" />
-
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
                         android:gravity="center"
-                        android:text="Anxiety"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/anxiety_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/depression_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="20dp"
+                                app:cardCornerRadius="30dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        app:cardCornerRadius="20dp">
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/anxiety" />
 
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/depression" />
-                    </androidx.cardview.widget.CardView>
+                            </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        android:gravity="center"
-                        android:text="Depression"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:text="Anxiety"
+                                android:textColor="#E91E63"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
 
-                </LinearLayout>
+                        </LinearLayout>
 
-            </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/depression_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="20dp"
+                                app:cardCornerRadius="20dp">
 
-                <LinearLayout
-                    android:id="@+id/bipolar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/depression" />
+                            </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="20dp"
-                        app:cardCornerRadius="20dp">
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:text="Depression"
+                                android:textColor="#E91E63"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
 
-                        <ImageView
-                            android:id="@+id/imageView10"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/bipolar" />
+                        </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/textView33"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Bi-Polar"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/psychosis"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="20dp"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageView
-                            android:id="@+id/imageView13"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/psychosis" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/textView36"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
                         android:gravity="center"
-                        android:text="Psychosis"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
 
-                </LinearLayout>
-            </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/bipolar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_margin="20dp"
+                                app:cardCornerRadius="20dp">
 
-                <LinearLayout
-                    android:id="@+id/sleep_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageView10"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/bipolar" />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Bi-Polar"
+                                android:textColor="#E91E63"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/psychosis"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_margin="20dp"
+                                app:cardCornerRadius="20dp">
+
+                                <ImageView
+                                    android:id="@+id/imageView13"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/psychosis" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Psychosis"
+                                android:textColor="#E91E63"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageView
-                            android:id="@+id/imageView11"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/sleep" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Sleep"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/sleep_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/focus_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="20dp"
+                                app:cardCornerRadius="20dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        app:cardCornerRadius="20dp">
+                                <ImageView
+                                    android:id="@+id/imageView11"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/sleep" />
+                            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:id="@+id/imageView12"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/focus" />
-                    </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Addiction"
+                                android:textColor="#E91E63"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Focus"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/focus_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="20dp"
+                                app:cardCornerRadius="20dp">
+
+                                <ImageView
+                                    android:id="@+id/imageView12"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/focus" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/textView25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="PSTD"
+                                android:textColor="#E91E63"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
-
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

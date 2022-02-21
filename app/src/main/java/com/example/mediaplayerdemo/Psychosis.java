@@ -149,6 +149,12 @@ public class Psychosis extends AppCompatActivity {
 
         System.out.println(points);
 
+        String point = String.valueOf(points);
+
+        Background_Worker background_worker = new Background_Worker(this);
+        background_worker.execute("psychosis_points", point);
+
+
 //        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), AudioPlayer.class);
         intent.putExtra("points", points);
