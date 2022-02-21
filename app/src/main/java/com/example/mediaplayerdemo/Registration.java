@@ -117,6 +117,10 @@ public class Registration extends AppCompatActivity {
 //                            image_path = encodedbitmap(bitmap);
 //                        }
 
+
+                        Background_Worker background_worker = new Background_Worker(getApplication());
+                        background_worker.execute("register", username, phone, email, password);
+
                     }
 
                     else {
@@ -125,8 +129,6 @@ public class Registration extends AppCompatActivity {
 
 
 
-                    Background_Worker background_worker = new Background_Worker(getApplication());
-                    background_worker.execute("register", username, phone, email, password);
 
 
                 }

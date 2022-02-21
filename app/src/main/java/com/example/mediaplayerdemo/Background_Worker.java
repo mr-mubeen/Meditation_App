@@ -309,7 +309,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                         editor.putInt("uphone", uphon);
                         editor.putString("rid", r_id);
                         editor.putString("uname", nam);
-                        editor.putString("upass", pas);
+                        editor.putString("password", pas);
                         editor.commit();
 
                         Intent intent = new Intent(context, Navigation.class);

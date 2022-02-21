@@ -28,12 +28,10 @@ public class SignIn extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("userr" , Context.MODE_PRIVATE);
 
-        if(sharedPreferences.contains("rid") && sharedPreferences.contains("uname"))
+        if(sharedPreferences.contains("uname") && sharedPreferences.contains("password"))
         {
             Intent intent = new Intent(this , Navigation.class);
             startActivity(intent);
-
-
         }
 
 
