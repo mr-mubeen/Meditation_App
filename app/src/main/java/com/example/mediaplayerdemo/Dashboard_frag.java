@@ -19,7 +19,6 @@ public class Dashboard_frag extends Fragment {
         // Required empty public constructor
     }
 
-    ImageView i1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,21 +27,6 @@ public class Dashboard_frag extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_dashboard_frag, container, false);
 
-        i1 = view.findViewById(R.id.logout);
-
-        i1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SharedPreferences preferences = getActivity().getSharedPreferences("userr", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.clear();
-                editor.apply();
-                getActivity().finish();
-
-                Intent intent = new Intent(getContext(), SignIn.class);
-                startActivity(intent);
-            }
-        });
 
 
         return view;

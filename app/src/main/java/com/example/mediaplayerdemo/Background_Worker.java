@@ -662,119 +662,17 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 } else {
 //                    alertDialog.setMessage("Registered Successfully");
 //                    alertDialog.show();
-                    Toast.makeText(context, "Regsiteration Failed Phone Number already Exists '\n'  Please Login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Regsiteration Failed Email already Exists '\n'  Please Login", Toast.LENGTH_SHORT).show();
 //                        Intent intent = new Intent(context, MainActivity.class);
 //                        context.startActivity(intent);
                 }
             }
 
 
-            if (type.equals("update")) {
-
-                if (s.equals("Failed")) {
-//                    alertDialog.setMessage("Regsiteration Failed Phone Number already Exists '\n' Please Login");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Update Failed", Toast.LENGTH_SHORT).show();
-                } else {
-//                    alertDialog.setMessage("Registered Successfully");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Updated", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(context, MainActivity.class);
-//                        context.startActivity(intent);
-                }
-            }
-
-            if (type.equals("donated")) {
-
-                if (s.equals("Failed")) {
-//                    alertDialog.setMessage("Regsiteration Failed Phone Number already Exists '\n' Please Login");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-                } else {
-//                    alertDialog.setMessage("Registered Successfully");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Donated", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(context, MainActivity.class);
-//                        context.startActivity(intent);
-                }
-            }
-
-            if (type.equals("recieved")) {
-
-                if (s.equals("Registered")) {
-//                    alertDialog.setMessage("Regsiteration Failed Phone Number already Exists '\n' Please Login");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Completed", Toast.LENGTH_SHORT).show();
-                } else {
-//                    alertDialog.setMessage("Registered Successfully");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(context, MainActivity.class);
-//                        context.startActivity(intent);
-                }
-            }
 
 
-            if (type.equals("delete")) {
-
-                if (s.equals("Failed")) {
-//                    alertDialog.setMessage("Regsiteration Failed Phone Number already Exists '\n' Please Login");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Delete Failed", Toast.LENGTH_SHORT).show();
-                } else {
-//                    alertDialog.setMessage("Registered Successfully");
-//                    alertDialog.show();
-                    Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(context, MainActivity.class);
-//                        context.startActivity(intent);
-                }
-            }
-
-//            Donation purpose result
-            if (type.equals("donate"))
-            {
-
-                if (s.equals("Failed")) {
-                    alertDialog.setMessage("Donate Failed");
-                    alertDialog.show();
-                } else {
-                    alertDialog.setMessage("Submitted Successfully");
-                    alertDialog.show();
-//                    Intent intent = new Intent(context, home.class);
-//                    context.startActivity(intent);
-                }
-            }
 
 
-            if (type.equals("request"))
-            {
-
-                if (s.equals("Failed")) {
-                    Toast.makeText(context, "Request Failed", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(context, "Submitted", Toast.LENGTH_SHORT).show();
-//                    alertDialog.setMessage("Submitted Successfully");
-//                    alertDialog.show();
-//                    Intent intent = new Intent( context , home.class);
-//                    context.startActivity(intent);
-                }
-            }
-
-            if (type.equals("story"))
-            {
-
-                if (s.equals("Register-Failed")) {
-                    Toast.makeText(context, "Posted Failed", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(context, "Posted Succesfully", Toast.LENGTH_SHORT).show();
-//                    alertDialog.setMessage("Post Successfully");
-//                    alertDialog.show();
-//                    Intent intent = new Intent(context, story.class);
-//                    context.startActivity(intent);
-                }
-            }
 
 
         }

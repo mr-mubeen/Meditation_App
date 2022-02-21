@@ -1,6 +1,7 @@
 package com.example.mediaplayerdemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -49,6 +51,7 @@ public class profile extends Fragment {
     CircleImageView pf;
     Button lg;
 
+    ImageView i1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,7 +77,24 @@ public class profile extends Fragment {
         t57 = view.findViewById(R.id.textView57);
         t59 = view.findViewById(R.id.textView59);
         pf = view.findViewById(R.id.profile_image);
-        lg = view.findViewById(R.id.logout);
+
+
+
+        i1 = view.findViewById(R.id.logout);
+
+        i1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences preferences = getActivity().getSharedPreferences("userr", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.apply();
+                getActivity().finish();
+
+                Intent intent = new Intent(getContext(), SignIn.class);
+                startActivity(intent);
+            }
+        });
 
 
         getProfile();
@@ -172,8 +192,9 @@ public class profile extends Fragment {
                                 String addiction_points = jsonObject.getString("addiction_points");
                                 String bipolar_points = jsonObject.getString("bipolar_points");
                                 String psychosis_points = jsonObject.getString("psychosis_points");
-                                String url = "http:///profiles/";
-                                image = url + jsonObject.getString("profile_image");
+                                String url = "http://192.168.2.107/meditation_app/profiles/";
+//                                http://lms-php.000webhostapp.com/naiki/profiles/
+                                image = url + jsonObject.getString("image");
 
 
 //  Setting values again to textboxes
