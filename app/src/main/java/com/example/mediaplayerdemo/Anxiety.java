@@ -24,7 +24,7 @@ public class Anxiety extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addiction);
+        setContentView(R.layout.activity_anxiety);
 
         r1 = (RadioGroup) findViewById(R.id.radio1);
         r2 = (RadioGroup) findViewById(R.id.radio2);
@@ -154,14 +154,7 @@ public class Anxiety extends AppCompatActivity {
             points += 1;
         }
 
-
-//        Toast.makeText(this, "Your Points are", Toast.LENGTH_SHORT).show();
-//        Toast.makeText(this, points, Toast.LENGTH_SHORT).show();
-
         System.out.println(points);
-
-
-
 
         String point = String.valueOf(points);
 

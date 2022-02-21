@@ -150,7 +150,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         if (type.equals("anxiety_points")) {
             String reg_url = "http://192.168.2.107/meditation_app/anxiety_points.php";
             String p = params[1];
-            String id = params[2];
+            String rid = params[2];
 
             try {
                 URL url = new URL(reg_url);
@@ -164,7 +164,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
                 String post_data = URLEncoder.encode("p", "UTF-8") + "=" + URLEncoder.encode(p, "UTF-8")+
-                        URLEncoder.encode("id", "UTF-8") + "=" + URLEncoder.encode(id, "UTF-8");
+                        URLEncoder.encode("rid", "UTF-8") + "=" + URLEncoder.encode(rid, "UTF-8");
 
 
                 bufferedWriter.write(post_data);
