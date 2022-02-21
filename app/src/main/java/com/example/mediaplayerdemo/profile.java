@@ -122,7 +122,7 @@ public class profile extends Fragment {
 
                     try {
 //                        API link
-                        String fetch_url = "http://192.168.2.107/meditation_app/profile.php";
+                        String fetch_url = "https://isolate-humans.000webhostapp.com/meditation_app/profile.php";
                         URL url = new URL(fetch_url);
                         HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                         httpURLConnection.setRequestMethod("POST");
@@ -192,7 +192,7 @@ public class profile extends Fragment {
                                 String addiction_points = jsonObject.getString("addiction_points");
                                 String bipolar_points = jsonObject.getString("bipolar_points");
                                 String psychosis_points = jsonObject.getString("psychosis_points");
-                                String url = "http://192.168.2.107/meditation_app/profiles/";
+                                String url = "https://isolate-humans.000webhostapp.com/meditation_app/profiles/";
 //                                http://lms-php.000webhostapp.com/naiki/profiles/
                                 image = url + jsonObject.getString("image");
 

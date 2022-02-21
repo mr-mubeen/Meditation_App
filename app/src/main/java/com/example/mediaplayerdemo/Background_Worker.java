@@ -40,11 +40,11 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
 //        http://192.168.56.1/naiki/login.php
 //        http://lms-php.000webhostapp.com/LMS_PHP/mlogin.php
-
+        https://isolate-humans.000webhostapp.com/meditation_app/login.php
 
         if (type.equals("login")) {
             try {
-                String login_url = "http://192.168.2.107/meditation_app/login.php";
+                String login_url = "https://isolate-humans.000webhostapp.com/meditation_app/login.php";
                 String un = params[1];
                 String ps = params[2];
 
@@ -81,74 +81,9 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
 
 
-        if (type.equals("update")) {
-            String reg_url = "http://lms-php.000webhostapp.com/naiki/update.php";
-            String did = params[1];
-            String nm = params[2];
-            String ct = params[3];
-            String qt = params[4];
-            String nt = params[5];
-
-
-
-            try {
-                URL url = new URL(reg_url);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
-                OutputStream outputStream = httpURLConnection.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-                String post_data =
-                        URLEncoder.encode("did", "UTF-8") + "=" + URLEncoder.encode(did, "UTF-8") +
-                                "&" + URLEncoder.encode("nm", "UTF-8") + "=" + URLEncoder.encode(nm, "UTF-8") +
-                                "&" + URLEncoder.encode("ct", "UTF-8") + "=" + URLEncoder.encode(ct, "UTF-8") +
-                                "&" + URLEncoder.encode("qt", "UTF-8") + "=" + URLEncoder.encode(qt, "UTF-8") +
-
-                                "&" + URLEncoder.encode("nt", "UTF-8") + "=" + URLEncoder.encode(nt, "UTF-8");
-
-
-                bufferedWriter.write(post_data);
-                bufferedWriter.flush();
-                bufferedWriter.close();
-                outputStreamWriter.close();
-                outputStream.close();
-
-
-                InputStream inputStream = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                String line = "";
-                String result = "";
-
-                while ((line = bufferedReader.readLine()) != null) {
-                    result += line;
-                }
-
-                bufferedReader.close();
-                inputStreamReader.close();
-                inputStream.close();
-
-                httpURLConnection.disconnect();
-
-
-                return result;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
 
         if (type.equals("anxiety_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/anxiety_points.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/anxiety_points.php";
             String p = params[1];
             String rid = params[2];
 
@@ -203,7 +138,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         }
         if (type.equals("bipolar_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/bipolar_points.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/bipolar_points.php";
             String p = params[1];
             String rid = params[2];
 
@@ -258,7 +193,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         }
         if (type.equals("depression_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/depression_points.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/depression_points.php";
             String p = params[1];
             String rid = params[2];
 
@@ -312,7 +247,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         }
         if (type.equals("psychosis_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/psychosis_points.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/psychosis_points.php";
             String p = params[1];
             String rid = params[2];
 
@@ -367,7 +302,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         }
         if (type.equals("pstd_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/pstd_points.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/pstd_points.php";
             String p = params[1];
             String rid = params[2];
 
@@ -422,7 +357,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
         }
         if (type.equals("addiction_points")) {
-            String reg_url = "http://192.168.2.107/meditation_app/addiction_points.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/addiction_points.php";
             String p = params[1];
             String rid = params[2];
 
@@ -480,7 +415,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
 
 //        REGISTER CODE
         if (type.equals("register")) {
-            String reg_url = "http://192.168.2.107/meditation_app/register.php";
+            String reg_url = "https://isolate-humans.000webhostapp.com/meditation_app/register.php";
             String un = params[1];
             String ph = params[2];
             String em = params[3];
