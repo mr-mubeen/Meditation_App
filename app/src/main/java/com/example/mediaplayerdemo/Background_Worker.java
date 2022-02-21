@@ -424,6 +424,7 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
         if (type.equals("addiction_points")) {
             String reg_url = "http://192.168.2.107/meditation_app/addiction_points.php";
             String p = params[1];
+            String rid = params[2];
 
             try {
                 URL url = new URL(reg_url);
@@ -623,8 +624,6 @@ public class Background_Worker extends AsyncTask<String,Void,String> {
                     alertDialog.setMessage("Invalid username or password");
                     alertDialog.show();
                 } else {
-
-
                     try {
                         sharedPreferences = context.getSharedPreferences("userr", Context.MODE_PRIVATE);
 

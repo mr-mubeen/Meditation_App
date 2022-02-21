@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaPlayerDemo">
-        <activity android:name=".pstd"></activity>
+        <activity android:name=".pstd" />
         <activity android:name=".addiction" />
         <activity android:name=".Psychosis" />
         <activity android:name=".Despression" />

@@ -39,7 +39,7 @@ public class Navigation extends AppCompatActivity {
                         fragment = new Dashboard_frag();
                         break;
                     case 3:
-                        fragment = new Dashboard_frag();
+                        fragment = new profile();
                         break;
                 }
                 loadFragment(fragment);

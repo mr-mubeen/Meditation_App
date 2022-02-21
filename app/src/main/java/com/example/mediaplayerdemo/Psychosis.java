@@ -2,7 +2,9 @@ package com.example.mediaplayerdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,10 +13,11 @@ import android.widget.RadioGroup;
 
 public class Psychosis extends AppCompatActivity {
 
-
     RadioGroup r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
     Button b1;
     int points;
+    SharedPreferences sharedPreferences;
+    String rid;
 
     RadioButton rb1,rb2,rb3,rb4,rb5,rb6,rb7,rb8,rb9,rb10;
 
@@ -33,6 +36,14 @@ public class Psychosis extends AppCompatActivity {
         r8 = (RadioGroup) findViewById(R.id.radio8);
         r9 = (RadioGroup) findViewById(R.id.radio9);
         r10 = (RadioGroup) findViewById(R.id.radio10);
+
+        sharedPreferences = getSharedPreferences("userr" , Context.MODE_PRIVATE);
+
+        if(sharedPreferences.contains("r_id") && sharedPreferences.contains("password"))
+        {
+            rid = sharedPreferences.getString("r_id" , "0");
+        }
+
 
     }
 
@@ -143,16 +154,12 @@ public class Psychosis extends AppCompatActivity {
             points += 1;
         }
 
-
-//        Toast.makeText(this, "Your Points are", Toast.LENGTH_SHORT).show();
-//        Toast.makeText(this, points, Toast.LENGTH_SHORT).show();
-
         System.out.println(points);
 
         String point = String.valueOf(points);
 
         Background_Worker background_worker = new Background_Worker(this);
-        background_worker.execute("psychosis_points", point);
+        background_worker.execute("psychosis_points", point, rid);
 
 
 //        Toast.makeText(this, ans, Toast.LENGTH_SHORT).show();
